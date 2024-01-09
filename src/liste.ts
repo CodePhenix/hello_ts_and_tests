@@ -2,7 +2,7 @@ export function long(list: number[]): number {
     let nbr = 0;
 
 
-    for (const el of list) {
+    for (const _el of list) {
         nbr += 1;
     }
 

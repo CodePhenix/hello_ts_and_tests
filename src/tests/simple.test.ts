@@ -40,15 +40,7 @@ test("max  a>b to equal 3", () => {
 
 test("saison a>=x to equal Saison", () => {
   expect(saison(1)).toBe("hiver");
-}
-
-
-
-// // test("longa>=x to equal Saison", () => {
-//   expect(saison(1)).toBe("hiver");
-// }
-
-
+})
 
 
 
