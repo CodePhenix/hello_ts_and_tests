@@ -64,6 +64,21 @@ const data: ? = [
 //   { name: "Tommy", age: 17, zipcode: 42 },
 //   { name: "Tom", age: 76, zipcode: 93 },
 // ];
+
+const data_bis: ? = [
+  { firstname: "Zoe", lastname: "Dupont" },
+  { firstname: "Tommy", lastname: "Toto" },
+  { firstname: "Joe", lastname: "Jojo" },
+  { firstname: "Tom", lastname: "Titi" },
+];
+
+// computeFullName(data_bis) -->
+// [
+//   { fullname: "Zoe Dupont" },
+//   { fullname: "Tommy Toto" },
+//   { fullname: "Joe Jojo" },
+//   { fullname: "Tom Titi" },
+// ]
 ```
 
 ## Typescript further
