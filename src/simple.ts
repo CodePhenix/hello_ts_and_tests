@@ -60,3 +60,23 @@ export function saison(a: number): Saison {
 
 }
 
+// Union
+type SaisonBis = "hiver" | "été"
+type Variable = number | null
+
+
+// Merge
+type Person = {
+  name: string,
+  age: number,
+}
+
+type Address = {
+  zipcode: string,
+  regrion: string,
+}
+type PersonWithAdress = Person & Address
+
+type PersonWithTelephone = Person & {
+  tel: number
+}
