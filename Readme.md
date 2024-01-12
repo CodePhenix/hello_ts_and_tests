@@ -60,7 +60,7 @@ const data: ? = [
 // ];
 
 // filter if name starts with search variable
-// keepIleDeFrance(data, "Tom") --> [
+// filterByName(data, "Tom") --> [
 //   { name: "Tommy", age: 17, zipcode: 42 },
 //   { name: "Tom", age: 76, zipcode: 93 },
 // ];
