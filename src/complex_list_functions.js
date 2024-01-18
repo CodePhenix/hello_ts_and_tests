@@ -93,7 +93,7 @@ function keepIleDeFrance2(humans){
     let francil = [];
     for (const human of humans) {
         // if human.zipcode est dans idf 
-        if (idf.includes (human.zipcode)) {
+        if (idf.includes(human.zipcode)) {
         //  console.log(human);
         
             francil.push(human);
