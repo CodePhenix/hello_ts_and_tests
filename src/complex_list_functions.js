@@ -150,6 +150,7 @@ function computerFullName(humans) {
 
     for (const human of humans) {
         // console.log(humans)
+        // ici je créeer une nouvelle variable newHuman pour pouvoir réaliser une concat "nom+prenom"
         newHuman = human.firstname.concat(' ', human.lastname);
         // newHuman = human.firstname + " " + human.lastname
         // console.log(newHuman);
