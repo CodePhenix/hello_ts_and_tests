@@ -24,6 +24,19 @@ function keepMajeurs(humans) {
     }
     return majeurs;
 };
+// --------------------Exerciced avec methode .filter---- le .filter fait office de boucle for ---
+function keepMajeurs2(humans) {
+    let majeurs = humans.filter(function (human) {
+        return human.age >= 18
+    })
+    return majeurs
+}
+function keepMajeurs3(humans) {
+    let majeurs = humans.filter((human) => (
+        human.age >= 18
+    ))
+    return majeurs
+}
 
 console.log(keepMajeurs(data))
 
@@ -51,6 +64,16 @@ function keepMineurs(humans) {
 
 console.log(keepMineurs(data));
 
+// --------------------Exercice avec methode .filter---- le .filter fait office de boucle for ---
+
+function keepMineurs2(humans) {
+
+    let mineurs = humans.filter((human) => (
+        human.age < 18))
+
+    return mineurs;
+}
+console.log(keepMineurs2(data));
 
 
 // filter if zipcode is either one of 75, 91, 92, 93, 94, 95, 77, 78
@@ -58,8 +81,8 @@ console.log(keepMineurs(data));
 //   { name: "Zoe", age: 12, zipcode: 75 },
 // ];
 
-const botte = [1, 2, 4]
-const une_aiguille = 6
+// const botte = [1, 2, 4]
+// const une_aiguille = 6
 function estDansListe(botte, une_aiguille) {
     for (const el of botte) {
         if (une_aiguille == el) {
@@ -72,7 +95,33 @@ function estDansListe(botte, une_aiguille) {
 
 console.log(estDansListe(botte, une_aiguille))
 
+// -------------------estdanslaliste2 .filter ------------------
 
+
+
+const botte = [1, 4, 6]
+const une_aiguille = 8
+function estDanslaliste2(botte, une_aiguille) {
+    let aiguilles = botte.filter((el) => (
+        une_aiguille === el))
+    // console.log(une_aiguille);
+    // Si aiguilles est vide return false
+    // sinon return true
+
+    if (aiguilles.length === 0) {
+        return false;
+    } else {
+        return true;
+
+    }
+
+
+
+}
+
+console.log(estDanslaliste2(botte, une_aiguille))
+
+// ------------------------------------------------------------
 
 const idf = [75, 91, 92, 93, 94, 95, 77, 78];
 
@@ -129,8 +178,6 @@ function filterByName(humans, str1) {
         };
 
     }
-
-
     // humanNames.push(humans);
     return humanNames
 }
