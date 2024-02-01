@@ -97,8 +97,6 @@ console.log(estDansListe(botte, une_aiguille))
 
 // -------------------estdanslaliste2 .filter ------------------
 
-
-
 const botte = [1, 4, 6]
 const une_aiguille = 8
 function estDanslaliste2(botte, une_aiguille) {
@@ -106,7 +104,7 @@ function estDanslaliste2(botte, une_aiguille) {
         une_aiguille === el))
     // console.log(une_aiguille);
     // Si aiguilles est vide return false
-    // sinon return true
+    // sinon return true-è_çà)
 
     if (aiguilles.length === 0) {
         return false;
@@ -115,29 +113,58 @@ function estDanslaliste2(botte, une_aiguille) {
 
     }
 
-
-
 }
 
 console.log(estDanslaliste2(botte, une_aiguille))
 
 // ------------------------------------------------------------
 
+// const idf = [75, 91, 92, 93, 94, 95, 77, 78];
+
+// function keepIleDeFrance(humans) {
+//     let francil = [];
+//     for (const human of humans) {
+//         // if human.zipcode est dans idf 
+//         if (estDansListe(idf, human.zipcode)) {
+//             //  console.log(human);
+
+//             francil.push(human);
+//         }
+//     }
+//     return francil;
+// }
+// -----------------------exercice sans la boucle for--------------
+
+
+// function estDansListe(botte, une_aiguille) {
+//     for (const el of botte) {
+//         if (une_aiguille == el) {
+//             return true;
+//         }
+
+//     }
+//     return false;
+// }
+
+// console.log(estDansListe(botte, une_aiguille))
+// ====================Methode filter==============================
 const idf = [75, 91, 92, 93, 94, 95, 77, 78];
+// const idf = [18, 25, 35, 49];
+function keepIleDeFrancebis(humans, idf) {
+    let francil = humans.filter(human => idf.includes(human.zipcode))
 
-function keepIleDeFrance(humans) {
-    let francil = [];
-    for (const human of humans) {
-        // if human.zipcode est dans idf 
-        if (estDansListe(idf, human.zipcode)) {
-            //  console.log(human);
+    if (francil.length === 0) {
+        // Nous sommes dans le cas où aucun  habitant n'habite dans les départements cités
+        return "Aucun habitant en Île de France";
 
-            francil.push(human);
-        }
     }
     return francil;
 }
 
+
+console.log(keepIleDeFrancebis(data, idf));
+
+//--------------------------------------------------------------------------------
 function keepIleDeFrance2(humans) {
     let francil = [];
     for (const human of humans) {
@@ -158,7 +185,7 @@ console.log(keepIleDeFrance2(data));
 //     { name: "Tommy", age: 17, zipcode: 42 },
 //     { name: "Tom", age: 76, zipcode: 93 },
 // ];
-
+// ========================================================================================
 const data_ter = [
     { name: "Zoe", age: 12, zipcode: 75 }, // human
     { name: "Tommy", age: 17, zipcode: 42 },
@@ -183,6 +210,31 @@ function filterByName(humans, str1) {
 }
 console.log(filterByName(data_ter, "Tom"));
 
+// ------------------exercice methode filter data_ter------------------------
+
+const data_tera = [
+    { name: "Zoe", age: 12, zipcode: 75 }, // human
+    { name: "Tommy", age: 17, zipcode: 42 },
+    { name: "Joe", age: 18, zipcode: 75 },
+    { name: "Tom", age: 76, zipcode: 93 },
+];
+const stra = 'Tom';
+
+function filterByName(humans, stra) {
+    let humanName = humans.filter(human => stra.includes(human.name))
+
+    if (humanName.lenght === 0) {
+        return "aucun nom inclus ou commence par Tom";
+    }
+
+    return humanName;
+
+}
+
+console.log(data_tera, "Tom")
+
+
+// -----------------------------------------------------------------------------
 // const entier = data_full.firstname.concat('', lastname);
 // const concat = concat("", "");
 const data_full = [
