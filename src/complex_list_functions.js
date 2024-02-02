@@ -210,7 +210,7 @@ function filterByName(humans, str1) {
 }
 console.log(filterByName(data_ter, "Tom"));
 
-// ------------------exercice methode filter data_ter------------------------
+// ------------------exercice methode filter data_tera------------------------
 
 const data_tera = [
     { name: "Zoe", age: 12, zipcode: 75 }, // human
@@ -218,20 +218,25 @@ const data_tera = [
     { name: "Joe", age: 18, zipcode: 75 },
     { name: "Tom", age: 76, zipcode: 93 },
 ];
-const stra = 'Tom';
+const stra = "Tom";
 
-function filterByName(humans, stra) {
-    let humanName = humans.filter(human => stra.includes(human.name))
+function filterByNames(humans, stra) {
+    let humanName = humans.filter((human) => {
 
-    if (humanName.lenght === 0) {
-        return "aucun nom inclus ou commence par Tom";
+        return human.name.includes(stra)
+    })
+    console.log("humanName: ", humanName);
+
+    if (humanName.length === 0) {
+        return "pas de nom commençant par Tom";
+
     }
 
     return humanName;
 
 }
 
-console.log(data_tera, "Tom")
+console.log("data: ", filterByNames(data_tera, "Tom"))
 
 
 // -----------------------------------------------------------------------------
